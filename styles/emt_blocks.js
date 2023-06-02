@@ -27,7 +27,7 @@ export const HeaderCt = styled.div`
   flex-flow: row wrap;
   align-items: center;
   justify-content: space-between;
-  height: 98px;
+  height: 100px;
 `
 
 export const GnbWrap = styled.ul`
@@ -99,22 +99,35 @@ export const AllMenuBtn = styled.button`
 `
 
 // Main
-export const MainSection1 = styled.div`
+export const MainIntro = styled.div`
   width: 100%;
-  height: 100vh;
   background: url('/main_section_02_bg_01_1.jpg') no-repeat center/cover;
+
+  .main_contents {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    padding-top: 50px;
+    text-align: center;
+
+    .main_inner {
+      padding: 0;
+    }
+  }
+`
+
+export const MainBiz = styled.div`
+  background: #0a3f43;
 `
 
 export const MainContents = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  
 `
 
 export const MainInner = styled.div`
   display: block;
-  text-align: center;
+  padding: 80px 0;
 `
 
 export const PromTextSmall = styled.p`
@@ -130,4 +143,40 @@ export const PromTextBig = styled.p`
   color: #fff;
   line-height: 1.3;
   margin-top: 30px;
+`
+
+export const MainTitleWrap = styled.div`
+
+`
+
+export const MainTitle = styled.div`
+  font-size: 50px;
+  font-weight: 600;
+  color: #fff;
+`
+
+export const MainSmTitle = styled.div`
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+`
+
+export const MainBizPost = styled.div`
+  margin-top: 30px;
+`
+
+export const MainBizPostWrap = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+`
+
+export const MainBizPostItem = styled.div`
+  flex-basis: calc(100% / 4 - 22.5px);
+  height: 0;
+  padding-bottom: 30%;
+  background: #e5e5e5;
 `
