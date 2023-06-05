@@ -1,3 +1,5 @@
+import { useRouter } from 'next/router';
+
 import {
   Container,
   HeaderWrap,
@@ -8,18 +10,30 @@ import {
 import Gnb from './gnb'
 
 export default function Header () {
+  const router = useRouter();
+  const currentPath = router.pathname;
+  let addHeadClass = "";
+
+  if (currentPath !== '/') {
+    addHeadClass = "sub-header";
+  }
+
   return (
     <>
-      <HeaderWrap>
+      <HeaderWrap className={addHeadClass}>
         <Container>
           <HeaderCt>
             <h1>
-              <a href="">
-                <img src="/images/logo_w.png" alt="로고" />
-              </a>
+              <button type="button" className="hd_logo-btn" onClick={()=>router.push('/')}>
+                {currentPath !== '/' ? (
+                  <img src="/images/logo.png" alt="로고" />
+                ) : (
+                  <img src="/images/logo_w.png" alt="로고" />
+                )}
+              </button>
             </h1>
             <Gnb></Gnb>
-            <AllMenuBtn type="button">
+            <AllMenuBtn type="button" className="all-menu-btn">
               <span></span>
             </AllMenuBtn>
           </HeaderCt>

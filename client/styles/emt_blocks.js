@@ -20,6 +20,28 @@ export const HeaderWrap = styled.header`
   position: fixed;
   z-index: 900;
   width: 100%;
+
+  &.sub-header {
+    .gnb_wrap {
+      > li {
+        > button {
+          color: #000;
+        }
+      }
+    }
+    .all-menu-btn {
+      span {
+        background: #000;
+
+        :before {
+          background: #000;
+        }
+        :after {
+          background: #000;
+        }
+      }
+    }
+  }
 `
 
 export const HeaderCt = styled.div`
@@ -28,6 +50,12 @@ export const HeaderCt = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 100px;
+
+  .hd_logo-btn {
+    display: block;
+    border: 0;
+    background: none;
+  }
 `
 
 export const GnbWrap = styled.ul`
@@ -42,8 +70,10 @@ export const GnbWrap = styled.ul`
     align-items: center;
     height: 100%;
 
-    > a {
+    > button {
       display: block;
+      border: 0;
+      background: none;
       font-size: 18px;
       font-weight: 600;
       color: #fff;
@@ -283,3 +313,58 @@ export const MainStoryPostTextWrap = styled.div`
     color: #999;
   }
 `
+
+// Sub
+export const SubWrap = styled.div`
+  padding-top: 200px;
+`
+
+export const SubTitle = styled.div`
+  font-size: 46px;
+  font-weight: 700;
+  color: #333;
+`
+
+export const SubContents = styled.div`
+  margin-top: 50px;
+`
+
+// Board
+export const BoardBtnWrap = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 5px;
+  margin-top: 30px;
+`
+
+// > List
+export const BoardListWrap = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  gap: 40px 20px;
+`
+
+export const BoardListItem = styled.button`
+  display: block;
+  width: 25%;
+  border: 0;
+  background: #eee;
+
+  .subj {
+    font-size: 18px;
+    font-weight: 400;
+    color: #333;
+  }
+  .date {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+  }
+`
+
+
+
+// > Register
