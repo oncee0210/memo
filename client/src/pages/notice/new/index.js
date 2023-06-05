@@ -15,38 +15,8 @@ import {
 } from 'antd';
 const { TextArea } = Input;
 
-import { useState } from 'react';
-import { ApolloClient, InMemoryCache, gql, ApolloProvider, useMutation } from '@apollo/client';
-
-const client = new ApolloClient({
-  uri: 'http://localhost:5000/graphql', // 서버의 엔드포인트 URL을 설정합니다.
-  cache: new InMemoryCache(),
-});
-
-const CREATE_NOTICE = gql`
-  mutation CreateNotice($title: String!, $content: String!) {
-    createNotice(title: $title, content: $content) {
-      id
-      title
-      content
-    }
-  }
-`;
-
-
-function NoticeNew() {
+export default function NoticeNewCompt() {
   const router = useRouter();
-
-  const [createNotice] = useMutation(CREATE_NOTICE, {
-    onCompleted: () => {
-      // 공지사항 등록 성공 시 필요한 처리 작업
-      router.push('/notice/list');
-    },
-    onError: (error) => {
-      // 공지사항 등록 실패 시 필요한 처리 작업
-      console.error(error);
-    },
-  });
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -88,12 +58,4 @@ function NoticeNew() {
       </Wrapper>
     </Container>
   )
-}
-
-export default function NoticeNewCompt() {
-  return (
-    <ApolloProvider client={client}>
-      <NoticeNew />
-    </ApolloProvider>
-  );
 }
