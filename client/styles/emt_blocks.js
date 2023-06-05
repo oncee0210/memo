@@ -101,7 +101,7 @@ export const AllMenuBtn = styled.button`
 // Main
 export const MainIntro = styled.div`
   width: 100%;
-  background: url('/main_section_02_bg_01_1.jpg') no-repeat center/cover;
+  background: url('/images/main_section_02_bg_01_1.jpg') no-repeat center/cover;
 
   .main_contents {
     display: flex;
@@ -150,6 +150,10 @@ export const MainTitleWrap = styled.div`
 `
 
 export const MainTitle = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
   font-size: 50px;
   font-weight: 600;
   color: #fff;
@@ -162,21 +166,120 @@ export const MainSmTitle = styled.div`
   color: #fff;
 `
 
-export const MainBizPost = styled.div`
-  margin-top: 30px;
+export const MainTabWrap = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+`
+
+export const MainTabBtn = styled.button`
+  font-size: 22px;
+  font-weight: 600;
+  color: #aaa;
+  border: 0;
+  background: none;
+
+  &.on {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
 `
 
 export const MainBizPostWrap = styled.div`
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
+  margin-top: 30px;
+
+  .swiper-slide {
+    
+  }
 `
 
-export const MainBizPostItem = styled.div`
-  flex-basis: calc(100% / 4 - 22.5px);
+export const MainBizPostCard = styled.a`
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
   height: 0;
-  padding-bottom: 30%;
-  background: #e5e5e5;
+  padding-bottom: 125%;
+  border-radius: 10px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+`
+
+export const MainBizPostTextWrap = styled.div`
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: flex-end;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  width: 100%;
+  height: 100%;
+  padding: 10px 10px 40px 30px;
+  background: rgba(0,0,0,0.5);
+
+  .stext {
+    font-size: 17px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .btext {
+    font-size: 30px;
+    font-weight: 600;
+    color: #fff;
+  }
+`
+
+export const MainStoryPostWrap = styled.div`
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+`
+
+export const MainStoryPostCard = styled.a`
+  display: block;
+  width: calc(20% - 16px);
+`
+
+export const MainStoryPostImgWrap = styled.div`
+  overflow: hidden;
+  position: relative;
+  height: 0;
+  padding-bottom: 55%;
+  border-radius: 10px;
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    transform: translate(-50%, -50%);
+  }
+`
+
+export const MainStoryPostTextWrap = styled.div`
+  margin-top: 20px;
+
+  .subj {
+    font-size: 18px;
+    font-weight: 400;
+    color: #fff;
+  }
+  .date {
+    margin-top: 5px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #999;
+  }
 `

@@ -15,7 +15,7 @@ export default function Header () {
           <HeaderCt>
             <h1>
               <a href="">
-                <img src="/logo_w.png" alt="로고" />
+                <img src="/images/logo_w.png" alt="로고" />
               </a>
             </h1>
             <Gnb></Gnb>
